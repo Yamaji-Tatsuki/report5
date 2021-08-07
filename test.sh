@@ -1,25 +1,26 @@
 #!/bin/bash
 #stil editting
-read -p > num1 num2
-if [$num1...] ; then # if num1 is not string
-
-	output1=$(./gcd.sh,  ) #引数を./gcdに渡す
-	if [$output1 = "please input integer !!"] ; then
-		echo "ok"
-		exit 0
-	else
-		echo "NG"
-		exit 1
-
-	if [$num2...] #if num2 is not string
-	output2=$(./gcd.sh,  ) #引数を./gcdに渡す
-	if [$output2 = "please input integer !!"] ; then                                                           echo "ok"                                                                                          exit 0
-	else
-		echo "NG"  
-		exit 1
-
-else
-	echo "ok"
+output0=$(./gcd.sh file '30' '40')
+if[$output0 = "20"]; then
+	echo "OK"
 	exit 0
-fi
+else
+	echo"NG"
+	exit 1
 
+output1=$(./gcd.sh file '1.5' '9')
+if[$output1 = "please input integer!!"]; then
+	echo "OK"
+	exit 0
+else
+	echo"NG"
+	exit 1
+
+output2=$(./gcd.sh file '数字' '9')
+if[$output2 = "please input integer!!"]; then
+	echo "OK"
+	exit 0
+else
+	echo"NG"
+	exit 1
+fi
